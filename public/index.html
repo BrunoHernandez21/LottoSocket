@@ -20,11 +20,9 @@
             console.log('saliendo del soc');
         });
 
-        socket.on('mensaje',function(payload){
+        socket.on('videos',function(payload){
             console.log(payload);
         });
-        
-        socket.emit('mensaje',{nombre:'Bruno'})
     </script>
 </body>
 

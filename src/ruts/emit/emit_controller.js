@@ -5,8 +5,8 @@ const send_all = async (req, res) => {
     try {
          await db.query("SELECT * FROM eventos_videos", function (error, results, _fields) {
             if (error) throw error;
-            controller.io.emit('mensaje',{videos:results});
-            res.json(results);
+            controller.io.emit('mensaje',{items:results});
+            res.json({"resp":"emitido correctamente"});
           });          
     } catch (error) {
         res.status(500);

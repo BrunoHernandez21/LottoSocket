@@ -1,9 +1,7 @@
 Version APP 1.0.0
 
-
-
-
-
+to run: 
+    npm run start:dev
 
 create .env format 
     PORT=4444444

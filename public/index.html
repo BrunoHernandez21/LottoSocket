@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Acceso Permitido</h1>
+    <script src="/socket.io/socket.io.js"></script>
+
+    <script>
+        const socket = io();
+        socket.on('connect', (data) => {
+            console.log('se ejecuta esto');
+        });
+
+        socket.on('disconnect',function(){
+            console.log('saliendo del soc');
+        });
+
+        socket.on('mensaje',function(payload){
+            console.log(payload);
+        });
+        
+        socket.emit('mensaje',{nombre:'Bruno'})
+    </script>
+</body>
+
+</html>

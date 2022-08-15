@@ -10,11 +10,12 @@ to run:
 create .env format 
 
 ```
-    PORT=4444444
-    SOC=@tcp(localHost:port)/
-    USER=root
-    PASSWORD=
-    SOC=@tcp(localHost:port)/
-    DATABASENAME=databaseName
+    PORT=25567
+    DB_HOST=127.0.0.1
+    DB_USER=root
+    DB_PORT=3306
+    DB_PASSWORD=
+    DB_NAME=lotto_music
+    DB_CONNECTION=mysql
 
 ```

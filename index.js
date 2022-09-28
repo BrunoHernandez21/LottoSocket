@@ -14,7 +14,7 @@ conexion.connect(function(err) {
     //StartServer
     server.listen(process.env.PORT, (err) => {
         if (err) throw new Error(err);
-        console.log("Server run on Port %d\nDEV_URL_REMOVE http://187.213.134.47:%d",process.env.PORT,process.env.PORT)    
+        console.log("Server run on Port: %d",process.env.PORT)    
     });
 });
 

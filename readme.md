@@ -17,5 +17,5 @@ create .env format
     DB_PASSWORD=
     DB_NAME=lotto_music
     DB_CONNECTION=mysql
-
+    
 ```

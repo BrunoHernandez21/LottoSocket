@@ -18,9 +18,7 @@ app.use(bodyParser.json());
 const vApp = require('./helpers/globals'); 
 var emit = require ('./ruts/emit/emit_ruts');
 const publicPath = path.resolve(__dirname,'./../public');
-// Rest Points
-/////  DEV REMOVE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// env http://187.213.134.47:25567/api/v1/env/
+// Rest Points  
 app.use("/api/" + vApp.version + "/env",express.static(publicPath));
 // Emiting service
 app.use("/api/" + vApp.version + "/emit", emit);

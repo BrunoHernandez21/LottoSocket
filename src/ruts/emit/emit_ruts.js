@@ -4,6 +4,7 @@ const metods = require('./emit_controller');
 
 
 // Rutes
-routes.get("/send/message",metods.send_all);
+routes.get("/send/estadisticas",metods.send_all);
+routes.post("/send/notificacion",metods.sned_to);
 
 module.exports = routes;

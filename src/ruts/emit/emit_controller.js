@@ -13,7 +13,21 @@ const send_all = async (req, res) => {
         res.send(error.message);
     };
 };
+const sned_to = async (req, res) => {
+    var body = req.body;
+    var user = body.user || 0;
+    if(user==0){
+        res.json({"resp":"Usuario es requerido"});
+        return;
+    }
+    var titulo = body.titulo || '';
+    var des = body.descripcion || '';
+    // controller.io.emit('notificaciones',{titulo:"hola guapo",descripcion:"que guapo"});
+     controller.io.to(2).emit('notificaciones',{titulo:titulo,descripcion:des});
+     res.json({"resp":"emitido correctamente"});
+};
 
 module.exports = {
     send_all,
+    sned_to,
 };

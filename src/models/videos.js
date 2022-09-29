@@ -11,12 +11,7 @@ function videoToJson(value) {
     return JSON.stringify(uncast(value, r("Video")), null, 2);
 }
 
-function invalidValue(typ, val, key = '') {
-    if (key) {
-        throw Error(`Invalid value for key "${key}". Expected type ${JSON.stringify(typ)} but got ${JSON.stringify(val)}`);
-    }
-    throw Error(`Invalid value ${JSON.stringify(val)} for type ${JSON.stringify(typ)}`, );
-}
+
 
 function jsonToJSProps(typ) {
     if (typ.jsonToJS === undefined) {

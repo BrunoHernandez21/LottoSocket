@@ -4,7 +4,9 @@ var controller = require('./../../websock/websock_controller');
 const send_all = async (req, res) => {
     try {
          await db.query("SELECT * FROM videos_estadisticas ORDER BY fecha", function (error, results, _fields) {
-            if (error) throw error;
+            if (error) {
+                res.json({"resp":error});
+            };
             controller.io.emit('estadisticas',{items:results});
             res.json({"resp":"emitido correctamente"});
           });          

@@ -24,8 +24,7 @@ const sned_to = async (req, res) => {
     }
     var titulo = body.titulo || '';
     var des = body.descripcion || '';
-    // controller.io.emit('notificaciones',{titulo:"hola guapo",descripcion:"que guapo"});
-     controller.io.to(2).emit('notificaciones',{titulo:titulo,descripcion:des});
+     controller.io.to(user).emit('notificaciones',{titulo:titulo,descripcion:des});
      res.json({"resp":"emitido correctamente"});
 };
 

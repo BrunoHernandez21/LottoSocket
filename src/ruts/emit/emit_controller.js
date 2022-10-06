@@ -15,7 +15,7 @@ const send_all = async (req, res) => {
         res.send(error.message);
     };
 };
-const sned_to = async (req, res) => {
+const send_to = async (req, res) => {
     var body = req.body;
     var user = body.user || 0;
     if(user==0){
@@ -30,5 +30,5 @@ const sned_to = async (req, res) => {
 
 module.exports = {
     send_all,
-    sned_to,
+    send_to,
 };
